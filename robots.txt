@@ -1,0 +1,4 @@
+Sitemap: https://projects.iq.harvard.edu/foodinsociety/sitemap.xml
+
+User-agent: *
+Disallow:
