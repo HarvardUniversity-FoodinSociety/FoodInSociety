@@ -20,7 +20,7 @@ jobs:
       - name: Install python
         uses: actions/setup-python@v1
         with:
-          python-version: '3.x'
+          python-version: '3.8'
       - name: Install Julia
         uses: julia-actions/setup-julia@v1
         with:
@@ -37,8 +37,8 @@ jobs:
               Pkg.add("NodeJS");
               Pkg.add(PackageSpec(name="Franklin",version="0.10"));
               using NodeJS; run(`$(npm_cmd()) install highlight.js`);
-              using Franklin; optimize();
-              cp(joinpath("__site", "feed.xml"), joinpath("__site", "index.xml"))'
+              using Franklin;
+              optimize();'
       - name: Deploy (main)
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: JamesIves/github-pages-deploy-action@releases/v3
